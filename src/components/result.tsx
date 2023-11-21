@@ -1,3 +1,5 @@
+import ProgressBar from "./ui/progressBar";
+
 type Props = {
     score: number;
     totalScore: number;
@@ -5,14 +7,16 @@ type Props = {
     }
 
 const Result = (props : Props) => {
+  const score = props.score;
+  const totalScore = props.totalScore;
   return (
     <>
     <div className="progress-section" data-aos="fade-left" data-aos-once="true">
       <div className="task-progress">
         <p>Your Score
-          <span>{props.score} / {props.totalScore}</span>
+          <span>{score /totalScore}</span>
         </p>
-        <progress className='progress' max={props.totalScore} value={props.score}/>
+        <ProgressBar max={totalScore} value={score}/>
       </div>
     </div>
     <input id='next-button' type='button' value="Try Again" onClick={props.reset} />

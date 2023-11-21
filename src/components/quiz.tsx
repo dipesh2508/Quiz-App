@@ -54,6 +54,7 @@ const Quiz = () => {
           {genreContainer ? (
             <>
               <div className="w-full flex-1">
+                
                 <div className="h-max-32 rounded-xl border-2 border-pink-400 bg-opacity-80 p-4 font-serif text-lg font-semibold drop-shadow-lg">
                   {QuizData[0].data[currentGenre][currentQuestion].question}
                 </div>
