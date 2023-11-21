@@ -11,10 +11,10 @@ const Result = (props : Props) => {
   const totalScore = props.totalScore;
   return (
     <>
-    <div className="progress-section" data-aos="fade-left" data-aos-once="true">
-      <div className="task-progress">
-        <p>Your Score
-          <span>{score /totalScore}</span>
+    <div data-aos="fade-left" data-aos-once="true" className="w-full flex-1">
+      <div className="space-y-4">
+        <p >Your Score
+          <span className="m-4">{score}/{totalScore}</span>
         </p>
         <ProgressBar max={totalScore} value={score}/>
       </div>
