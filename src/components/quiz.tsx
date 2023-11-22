@@ -48,7 +48,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="over-the-top container relative flex h-96 w-1/3 flex-col items-center gap-2 rounded-3xl bg-slate-300 bg-opacity-80 p-4">
+    <div className="over-the-top container relative flex h-96 w-2/3 md:w-1/3 flex-col items-center gap-2 rounded-3xl bg-slate-300 bg-opacity-80 p-4">
       {showResult ? (
         <Result
           score={score}
