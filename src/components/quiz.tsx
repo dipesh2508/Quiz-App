@@ -11,6 +11,7 @@ const Quiz = () => {
   const [genreContainer, setGenreContainer] = useState(false);
 
   const changeQuestion = () => {
+
     updateScore();
     if (currentQuestion < QuizData[0].data[currentGenre].length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -21,6 +22,11 @@ const Quiz = () => {
   };
 
   const genreSelection = () => {
+
+    if(selected === 0) {
+      alert("Please select a genre");
+      return;
+    }
     setCurrentGenre(selected - 1);
     setGenreContainer(true);
     setSelected(0);

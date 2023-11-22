@@ -13,11 +13,11 @@ const ProgressBar = (props: Props) => {
   useEffect(() => {
     const changeColor = () => {
       if (progress < 33 && progress >= 0) {
-        setBgColor("bg-red-400");
+        setBgColor("bg-red-500");
       } else if (progress < 66) {
-        setBgColor("bg-yellow-400");
+        setBgColor("bg-yellow-500");
       } else if (progress <= 100) {
-        setBgColor("bg-green-400");
+        setBgColor("bg-green-500");
       } else {
         throw new Error("Progress bar value is out of range");
       }
