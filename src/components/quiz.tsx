@@ -48,7 +48,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="over-the-top container relative flex h-96 w-2/3 md:w-1/3 flex-col items-center gap-2 rounded-3xl bg-slate-300 bg-opacity-80 p-4">
+    <div className="over-the-top container relative flex h-96 w-3/5 md:w-1/3 overflow-scroll md:overflow-hidden flex-col items-center gap-2 rounded-3xl bg-slate-300 bg-opacity-80 p-4">
       {showResult ? (
         <Result
           score={score}
@@ -61,18 +61,18 @@ const Quiz = () => {
             <>
               <div className="w-full flex-1">
                 
-                <div className="h-max-32 rounded-xl border-2 border-pink-400 bg-opacity-80 p-4 font-serif text-lg font-semibold drop-shadow-lg">
+                <div className="h-max-32 rounded-xl border-2 border-pink-400 bg-opacity-80 p-3 md:p-4 font-serif text-base md:text-lg font-semibold drop-shadow-lg">
                   {QuizData[0].data[currentGenre][currentQuestion].question}
                 </div>
               </div>
 
-              <div className=" flex w-full flex-col gap-4 font-sans">
+              <div className=" flex w-full flex-col overflow-clip text-sm gap-3 md:gap-4 font-sans">
                 {QuizData[0].data[currentGenre][currentQuestion].options.map(
                   (option, i) => {
                     return (
                       <button
                         key={i}
-                        className={`h-8 rounded-lg border-2 border-sky-400 bg-opacity-80 drop-shadow-md hover:bg-sky-400 ${
+                        className={`h-8 rounded-lg  border-2 border-sky-400 bg-opacity-80 drop-shadow-md hover:bg-sky-400 ${
                           selected === i + 1
                             ? "border-sky-500 bg-sky-500 hover:bg-sky-500"
                             : null
